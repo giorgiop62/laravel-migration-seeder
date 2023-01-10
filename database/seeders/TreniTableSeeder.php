@@ -31,15 +31,16 @@ class TreniTableSeeder extends Seeder
 
         for($i = 0; $i <10; $i++){
         $new_treno = new Treno();
-        $new_treno->name_station_p = $faker->name()
-        $new_treno->name_stattion_a = $faker->name()
-        $new_treno->orario_partenza = $faker->orario()
-        $new_treno->orario_arrivo = $faker;
+        $new_treno->name_station_p = $faker->name();
+        $new_treno->name_stattion_a = $faker->name();
+        $new_treno->orario_partenza = $faker->time();
+        $new_treno->orario_arrivo = $faker->time();
         $new_treno->codice_treno =$faker->numberBetween(1,10000);
-        $new_treno->num_carrozze =$faker->numberBetween(1,10)
+        $new_treno->num_carrozze =$faker->numberBetween(1,10);
         $new_treno->treno_in_orario =$faker;
         $new_treno->treno_cancellato =$faker;
         $new_treno->save();
+        }
 
 
 
@@ -47,3 +48,4 @@ class TreniTableSeeder extends Seeder
 
     }
 }
+
