@@ -33,8 +33,8 @@ return new class extends Migration
             $table->string('orario_arrivo',255);
             $table->string('codice_treno',255);
             $table->integer('num_carrozze');
-            $table->boolean('treno_in_orario');
-            $table->boolean('cancellato');
+            $table->boolean('treno_in_orario')->default(1);
+            $table->boolean('cancellato')->default(0);
 
 
 
